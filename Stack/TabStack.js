@@ -48,7 +48,7 @@ const TabNavigation = () => {
         tabBarIcon: ({ color, size, focused }) => {
           let iconName;
 
-          if (route.name === "TaskPage") {
+          if (route.name === "Task") {
             iconName = "clipboard";
           } else if (route.name === "CommunityPage") {
             iconName = "users";
@@ -65,7 +65,7 @@ const TabNavigation = () => {
         showLabel: false,
       }}
     >
-      <Tab.Screen name="TaskPage" component={TaskPage} />
+      <Tab.Screen name="Task" component={TaskStack} />
       <Tab.Screen name="CommunityPage" component={CommunityPage} />
       <Tab.Screen name="ReportPage" component={ReportPage} />
       <Tab.Screen name="NewsPage" component={NewsPage} />
