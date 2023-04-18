@@ -39,6 +39,7 @@ const TabNavigation = () => {
         },
         tabBarStyle: {
           backgroundColor: "#1b1f24",
+          borderTopWidth:0,
           
         },
         tabBarHideOnKeyboard: true,

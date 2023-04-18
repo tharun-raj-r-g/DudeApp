@@ -5,7 +5,7 @@ import { Feather } from "@expo/vector-icons";
 import SkillRatingCircle from "../Components/TaskComponents/SkillRatingCircle";
 import TopIcons from "../Components/General Components/TopIcons";
 const { width, height } = Dimensions.get("window");
-
+import taskdata from "../task.json";
 const TaskPage = ({navigation}) => {
   return (
     <View
@@ -53,7 +53,7 @@ const TaskPage = ({navigation}) => {
             flex: 1,
           }}
         >
-          7500dp
+          {taskdata.dudepoints}
         </Text>
         <Image
           style={[{ height: 100, width: 290, flex: 4, borderRadius: 10 }]}
@@ -70,12 +70,12 @@ const TaskPage = ({navigation}) => {
         }}
       >
         <TouchableOpacity onPress={() =>
-              navigation.navigate("TaskListPage")
+              navigation.navigate("TaskListPage",{skillid:0})
             }>
           <SkillRatingCircle color="#ffff00" percentage="59%" />
         </TouchableOpacity>
         <TouchableOpacity onPress={() =>
-              navigation.navigate("TaskListPage")
+              navigation.navigate("TaskListPage",{skillid:1})
             }>
           <SkillRatingCircle color="#24ff00" percentage="60%" />
         </TouchableOpacity>
@@ -90,12 +90,12 @@ const TaskPage = ({navigation}) => {
         }}
       >
         <TouchableOpacity onPress={() =>
-              navigation.navigate("TaskListPage")
+              navigation.navigate("TaskListPage",{skillid:2})
             }>
           <SkillRatingCircle color="#00c2ff" percentage="50%" />
         </TouchableOpacity>
         <TouchableOpacity onPress={() =>
-              navigation.navigate("TaskListPage")
+              navigation.navigate("TaskListPage",{skillid:3})
             }>
           <SkillRatingCircle color="#ff3737" percentage="70%" />
         </TouchableOpacity>
