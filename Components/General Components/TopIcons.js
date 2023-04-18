@@ -8,7 +8,6 @@ const TopIcons = () => {
   return (
     <View
         style={{
-          flex: 1,
           justifyContent: "space-between",
           flexDirection: "row",
           width: width,
