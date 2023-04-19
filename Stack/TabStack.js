@@ -13,13 +13,20 @@ const Tab = createBottomTabNavigator();
 
 const TabBarIcon = ({ iconName, focused }) => {
   return (
-    <View style={{ alignItems: "center" ,backgroundColor:focused?"#00ffff":"#1b1f24",borderRadius:11,height:35,width:40}}>
+    <View
+      style={{
+        alignItems: "center",
+        backgroundColor: focused ? "#00ffff" : "#1b1f24",
+        borderRadius: 11,
+        height: 35,
+        width: 40,
+      }}
+    >
       <Feather
         name={iconName}
         size={29}
         color={focused ? "black" : "#ffffff"}
       />
-      
     </View>
   );
 };
@@ -57,7 +64,7 @@ const TabNavigation = () => {
             iconName = "bar-chart";
           } else if (route.name === "NewsPage") {
             iconName = "globe";
-          } 
+          }
 
           return <TabBarIcon iconName={iconName} focused={focused} />;
         },
