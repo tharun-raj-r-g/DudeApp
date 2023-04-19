@@ -4,7 +4,7 @@ import TopIcons from '../Components/General Components/TopIcons';
 const { width, height } = Dimensions.get("window");
 import { Feather } from "@expo/vector-icons";
 
-const TaskDetailsPage = () => {
+const TaskDetailsPage = (props) => {
   return (
     <View style={{
       backgroundColor: "#1b1f24"
@@ -18,7 +18,7 @@ const TaskDetailsPage = () => {
           height:height*0.1,
           paddingBottom:20,
           marginTop:80,
-          borderBottomColor:"yellow",
+          borderBottomColor:props.color,
           borderBottomWidth:1,
         }}
       >
@@ -44,7 +44,7 @@ const TaskDetailsPage = () => {
             textAlign:"center"
           }}
         >
-          TASK DETAIL
+          TASK DETAILS
         </Text>
         <View
           style={{
@@ -70,9 +70,9 @@ const TaskDetailsPage = () => {
             marginRight:220
           }}
         >
-          TASK 1
+          {props.tasks.taskname}
         </Text>
-        <View style={{height:height*0.3,width:width-80,alignSelf:"center",borderRadius:30,borderWidth:2,borderColor:"yellow",backgroundColor:"#283138"}}></View>
+        <View style={{height:height*0.3,width:width-80,alignSelf:"center",borderRadius:30,borderWidth:2,borderColor:props.color,backgroundColor:"#283138"}}></View>
         <Text
           style={{
             fontSize: 16,
@@ -83,10 +83,10 @@ const TaskDetailsPage = () => {
             marginBottom:30,
           }}
         >
-          Here will be the description of task1
+         {props.tasks.taskdetails}
         </Text>
-        <View style={{height:height*0.07,width:width-160,borderRadius:10,alignSelf:"center",borderWidth:2,borderColor:"yellow",justifyContent:"center"}}>
-          <Text style={{alignSelf:"center",fontWeight:"bold",fontSize:25,color:"yellow"}}>START</Text>
+        <View style={{height:height*0.07,width:width-160,borderRadius:10,alignSelf:"center",borderWidth:2,borderColor:props.color,justifyContent:"center"}}>
+          <Text style={{alignSelf:"center",fontWeight:"bold",fontSize:25,color:props.color}}>START</Text>
         </View>
         </View>
         <View style={{marginTop:600}}></View>

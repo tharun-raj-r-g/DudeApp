@@ -58,7 +58,7 @@ const Tasklistcomponent = (props) => {
 
       <View style={{ flex: 3 }}>
         {props.item.tasks.map((item,index) => (
-            <TouchableOpacity onPress={()=>props.navigation.navigate("TaskDetailsPage")}>
+            <TouchableOpacity onPress={()=>props.navigation.navigate("TaskDetailsPage",{tasks:item,color:props.taskdata["skills"][props.id].color})}>
           <View
             style={{
               borderBottomWidth: props.index==props.taskdata["skills"][props.id]["weektasks"].length-1 && index==props.item.tasks.length-1?0:1,
